@@ -7,6 +7,7 @@ const resultLocation = document.querySelector('#result_location')
 const resultCondition = document.querySelector('#result_condition')
 const resultTemperature = document.querySelector('#result_temperature')
 const resultFeelslike = document.querySelector('#result_feelslike')
+const resultTime = document.querySelector('#result_time')
 
 
 searchForm.addEventListener('submit', (e) => {
@@ -19,6 +20,7 @@ searchForm.addEventListener('submit', (e) => {
                     resultCondition.textContent = ""
                     resultTemperature.textContent = ""
                     resultFeelslike.textContent = ""
+                    resultTime.textContent = ""
                     resultMessage.className = 'text-info'
                     resultMessage.textContent = "Searching..."
                     setTimeout(() =>{
@@ -31,6 +33,7 @@ searchForm.addEventListener('submit', (e) => {
                             resultCondition.textContent = "Condition: " + data.condition
                             resultTemperature.textContent = "Temperature: " + data.temperature
                             resultFeelslike.textContent = "Feelslike: " + data.feelslike
+                            resultTime.textContent = "Time: " + data.time
                         }
                     }, 1000)
             })

@@ -84,7 +84,8 @@ app.get('/projects/weather/search', (req, res) => {
                 location: add.name,
                 temperature: loc.temperature,
                 feelslike: loc.feelslike,
-                condition: loc.condition
+                condition: loc.condition,
+                time:loc.time
             })
         })
     })
