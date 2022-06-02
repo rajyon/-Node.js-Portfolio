@@ -1,0 +1,37 @@
+<div class="topnav" id="myTopnav">
+    <a id = "a1" class="active" href="/">PEREZ's</a>
+    <a id = "a2" href="/projects">Projects</a>
+    <a id = "a3" href="/contacts">Contact</a>
+    <a id = "a4" href="/help">Help</a>
+    <a id = "a5" href="/about">About</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<script>
+  if(window.location.pathname == "/projects" || window.location.pathname == "/projects/weather"){
+    document.getElementById("a1").className = "";
+    document.getElementById("a2").className = "active";
+  }else if(window.location.pathname == "/contacts"){
+    document.getElementById("a1").className = "";
+    document.getElementById("a3").className = "active";
+  }else if(window.location.pathname == "/help"){
+    document.getElementById("a1").className = "";
+    document.getElementById("a4").className = "active";
+  }else if(window.location.pathname == "/about"){
+    document.getElementById("a1").className = "";
+    document.getElementById("a5").className = "active";
+  }
+  
+
+
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
